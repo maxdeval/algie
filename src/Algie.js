@@ -4,7 +4,14 @@ function algie_42() {
 };
 
 function algie_all_multiply_by(array, number) {
-  // Write function here
+  if( _.isArray(array) && _.isInteger(number)) {
+    return _.map(array, function(value) { 
+      return value * number 
+    })  
+  }
+  else { 
+    return _.toArray(array)
+  }
 }
 
 
