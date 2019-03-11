@@ -3,8 +3,14 @@ function algie_42() {
   return 42;
 };
 
-function algie_reversed_index(array) {
-  // body...
+function algie_reversed_index(array, index) {
+  if(_.isArray(array) && _.isInteger(index)) {
+    return (_.reverse(array))[index]   
+  }
+  else {
+    return _.toInteger(array)
+  }
 }
+
 
 
