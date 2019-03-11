@@ -3,7 +3,7 @@ function algie_42() {
   return 42;
 };
 
-argumentToHide = 'hello'
+var argumentToHide = 423
 
 function algie_hide_that(argumentToHide) {
   if(_.isInteger(argumentToHide) || _.isString(argumentToHide) || _.isRegExp(argumentToHide)) {
