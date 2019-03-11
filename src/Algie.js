@@ -3,8 +3,22 @@ function algie_42() {
   return 42;
 };
 
+argumentToHide = 'hello'
+
 function algie_hide_that(argumentToHide) {
-  // body...
+  if(_.isInteger(argumentToHide) || _.isString(argumentToHide) || _.isRegExp(argumentToHide)) {
+    var argumentSplited = argumentToHide.toString().split('')
+    for(var i = 1; i < argumentSplited.length - 1; i++){
+      argumentSplited[i] = '*'
+    }
+    console.log(_.toString(argumentSplited))
+    var test = _.replace(argumentSplited, ',', '')
+    console.log(test)
+  }
 }
+
+
+
+algie_hide_that(argumentToHide)
 
 
