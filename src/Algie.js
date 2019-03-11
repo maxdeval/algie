@@ -4,6 +4,9 @@ function algie_42() {
 };
 
 function algie_is_array_of_string(array) {
-  // body...
+  if ( _.each(array), function(value) { _.isString(value) } ) {
+    return true
+  }
+
 }
 
