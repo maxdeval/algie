@@ -3,13 +3,19 @@ function algie_42() {
   return 42;
 };
 
-var argumentToHide = 423
+var argumentToHide = /^ImARegExp/
 
 function algie_hide_that(argumentToHide) {
   if(_.isInteger(argumentToHide) || _.isString(argumentToHide) || _.isRegExp(argumentToHide)) {
     var argumentSplited = argumentToHide.toString().split('')
+    console.log(argumentSplited)
     for(var i = 1; i < argumentSplited.length - 1; i++){
-      argumentSplited[i] = '*'
+      if(argumentSplited[i] === '^') {
+        argumentSplited[i] = ''
+      }
+      else {
+        argumentSplited[i] = '*'
+      }
     }
     return (_.join(argumentSplited, ''))
   }
