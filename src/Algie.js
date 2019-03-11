@@ -17,6 +17,9 @@ function algie_hide_that(argumentToHide) {
     }
     return (_.join(argumentSplited, ''))
   }
+  else {
+    return false
+  }
 }
 
 
