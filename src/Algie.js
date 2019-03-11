@@ -6,22 +6,29 @@ function algie_42() {
 
 array = ["a", 30, "c"]
 function algie_is_array_of_string(array) {
-  var test = []
-  _.each(array, function(value) {
-    if(_.isString(value)) {
-      test.push('true')
+  if (_.isArray(array)) {
+    
+    var arrayOfBooleans = [];
+
+    _.each(array, function(value) {
+      if(_.isString(value)) {
+        arrayOfBooleans.push(true)
+      }
+      else {
+        arrayOfBooleans.push(false)
+      }
+    })
+
+    if (_.includes(arrayOfBooleans, false)) {
+      return false
     }
     else {
-      test.push('false')
+      return true
     }
-  })
-  console.log(test)
-  if (_.includes(test, 'false')) {
-    return false
   }
   else {
-    return true
-  }
+    return false
+  } 
 }
 
 
