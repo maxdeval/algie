@@ -6,10 +6,11 @@ function algie_42() {
 number = 141
 function algie_ordinal_suffix(number){
     var lastOne = number.toString().split('').pop();
-    console.log("lastone")
     if(lastOne === '1') {
-      console.log("lastone")
       return 'st'
+    }
+    if(lastOne === '2') {
+      return 'nd'
     }
 
 }
