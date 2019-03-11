@@ -4,8 +4,13 @@ function algie_42() {
 };
 
 function algie_before_max(array) {
-  var newArray = _.sortBy(array)
-  console.log(newArray)
+  var sortedArray = _.sortBy(array)
+  var arrayOfInteger = _.each(sortedArray, function(value){
+    if (_.isInteger(value)) {
+      arrayOfInteger.push(value)
+    }
+  })
+  console.log(arrayOfInteger)
 }
 
-algie_before_max([1, 5, 4, 3, 65, 23, 42, 55, 12])
+algie_before_max(["1", "z", 4, 3, 65, /^/, 42, 51, 12])
