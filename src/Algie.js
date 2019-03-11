@@ -5,11 +5,11 @@ function algie_42() {
 
 function algie_few_of(array) {
   var counter = 0;
-  _.each(array), function(value){
+  _.each(array, function(value){
     if(value === true) {
       counter = counter + 1;
     }
-  }
+  })
   console.log(counter)
   if(counter === array.length){
     return false;
