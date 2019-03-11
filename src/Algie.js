@@ -3,6 +3,15 @@ function algie_42() {
   return 42;
 };
 
+number = 141
 function algie_ordinal_suffix(number){
-  
+    var lastOne = number.toString().split('').pop();
+    console.log("lastone")
+    if(lastOne === '1') {
+      console.log("lastone")
+      return 'st'
+    }
+
 }
+
+algie_ordinal_suffix(141)
