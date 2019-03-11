@@ -16,6 +16,12 @@ function algie_is_array_of_string(array) {
     }
   })
   console.log(test)
+  if (_.includes(test, 'false')) {
+    return false
+  }
+  else {
+    return true
+  }
 }
 
 
