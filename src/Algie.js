@@ -15,7 +15,7 @@ function algie_insert_everywhere(string, stringToInsert) {
     return _.toString(_.join(result, ''));
   }
   else {
-    return _.toString(string);
+    return false;
   }
 }
 
