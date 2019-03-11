@@ -4,24 +4,24 @@ function algie_42() {
 };
 
 function algie_few_of(array) {
-  var counter = 0;
-  _.each(array, function(value){
-    if(value === true) {
-      counter = counter + 1;
+  if(_.isArray(array)) {
+    var counter = 0;
+    _.each(array, function(value){
+      if(value === true) {
+        counter = counter + 1;
+      }
+    })
+    if(counter === array.length){
+      return false;
     }
-  })
-  console.log(counter)
-  if(counter === array.length){
-    return false;
-  }
-  if (_.includes(array, true)) {
-    return true
+    else if (_.includes(array, true)) {
+      return true;
+    }
+    else {
+      return false;
+    }    
   }
   else {
-    return true;
+    return false;
   }
 }
-
-
-algie_few_of([true, true, true])
-
