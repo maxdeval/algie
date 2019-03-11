@@ -3,7 +3,6 @@ function algie_42() {
   return 42;
 };
 
-number = 141
 function algie_ordinal_suffix(number){
   if(_.isInteger(number)) {
     var lastOne = number.toString().split('').pop();
@@ -24,5 +23,3 @@ function algie_ordinal_suffix(number){
     return ''
 
 }
-
-algie_ordinal_suffix(141)
