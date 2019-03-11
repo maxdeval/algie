@@ -3,12 +3,7 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_complete_with(initialArray, untilThisSize, constantToInsert) {
+  // body...
 }
-
-function algie_generateWord() {
-  // return "zaropi"
-}
-
 
