@@ -4,5 +4,10 @@ function algie_42() {
 };
 
 function algie_camel_case_to_sentence(string) {
-  return _.lowerCase(_.startCase(string))
+  if (_.isString(string)){
+    return _.lowerCase(_.startCase(string)) 
+  }
+  else {
+    return false
+  }
 }
