@@ -3,11 +3,9 @@ function algie_42() {
   return 42;
 };
 
-
-array = ["a", 30, "c"]
 function algie_is_array_of_string(array) {
   if (_.isArray(array)) {
-    
+
     var arrayOfBooleans = [];
 
     _.each(array, function(value) {
@@ -31,7 +29,4 @@ function algie_is_array_of_string(array) {
   } 
 }
 
-
-
-algie_is_array_of_string(array)
 
