@@ -5,6 +5,7 @@ function algie_42() {
 
 number = 141
 function algie_ordinal_suffix(number){
+  if(_.isInteger(number)) {
     var lastOne = number.toString().split('').pop();
     if(lastOne === '1') {
       return 'st'
@@ -12,6 +13,15 @@ function algie_ordinal_suffix(number){
     if(lastOne === '2') {
       return 'nd'
     }
+    if(lastOne === '3') {
+      return 'rd'
+    }
+    if(lastOne === '4' || lastOne === '7' || lastOne === '9') {
+      return 'th'
+    }     
+  }
+  else
+    return ''
 
 }
 
