@@ -3,8 +3,6 @@ function algie_42() {
   return 42;
 };
 
-var argumentToHide = /^ImARegExp/
-
 function algie_hide_that(argumentToHide) {
   if(_.isInteger(argumentToHide) || _.isString(argumentToHide) || _.isRegExp(argumentToHide)) {
     var argumentSplited = argumentToHide.toString().split('')
@@ -21,6 +19,5 @@ function algie_hide_that(argumentToHide) {
   }
 }
 
-algie_hide_that(argumentToHide)
 
 
