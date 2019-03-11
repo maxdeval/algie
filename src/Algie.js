@@ -4,6 +4,15 @@ function algie_42() {
 };
 
 function algie_element_after(array, elementAfterIt) {
-  // body...
+  if (_.isArray(array) && _.isInteger(elementAfterIt) && (_.indexOf(array, elementAfterIt) === array.length - 1)) {
+      return array[0];
+  }
+  else if(_.isArray(array) && _.isInteger(elementAfterIt)) {
+    indexOfElement = _.indexOf(array, elementAfterIt);
+    return array[indexOfElement + 1] ;
+  }
+  else {
+    return false;
+  }
 }
 
