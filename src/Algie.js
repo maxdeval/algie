@@ -12,9 +12,10 @@ function algie_hide_that(argumentToHide) {
       argumentSplited[i] = '*'
     }
     //var test = _.replace(_.toString(argumentSplited), ',', '')
-    var test = _.toString(_.join(argumentSplited, ''))
+    var test = (_.join(argumentSplited, ''))
     console.log(_.isString(test))
     console.log(test)
+    return test
   }
 }
 
