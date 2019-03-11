@@ -4,6 +4,8 @@ function algie_42() {
 };
 
 function algie_before_max(array) {
-  // body...
+  var newArray = _.sortBy(array)
+  console.log(newArray)
 }
 
+algie_before_max([1, 5, 4, 3, 65, 23, 42, 55, 12])
