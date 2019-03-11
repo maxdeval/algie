@@ -3,12 +3,11 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_camel_case_to_sentence(string) {
+  if (_.isString(string)){
+    return _.lowerCase(_.startCase(string)) 
+  }
+  else {
+    return false
+  }
 }
-
-function algie_generateWord() {
-  // return "zaropi"
-}
-
-
