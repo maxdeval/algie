@@ -8,7 +8,7 @@ function algie_few_of(array) {
     var counter = 0;
     _.each(array, function(value){
       if(value === true) {
-        counter = counter + 1;
+        counter += 1;
       }
     })
     if(counter === array.length){
