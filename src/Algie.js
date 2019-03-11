@@ -3,10 +3,22 @@ function algie_42() {
   return 42;
 };
 
-function algie_is_array_of_string(array) {
-  if ( _.each(array), function(value) { _.isString(value) } ) {
-    return true
-  }
 
+array = ["a", 30, "c"]
+function algie_is_array_of_string(array) {
+  var test = []
+  _.each(array, function(value) {
+    if(_.isString(value)) {
+      test.push('true')
+    }
+    else {
+      test.push('false')
+    }
+  })
+  console.log(test)
 }
+
+
+
+algie_is_array_of_string(array)
 
