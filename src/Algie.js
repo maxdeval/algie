@@ -11,8 +11,9 @@ function algie_hide_that(argumentToHide) {
     for(var i = 1; i < argumentSplited.length - 1; i++){
       argumentSplited[i] = '*'
     }
-    console.log(_.toString(argumentSplited))
-    var test = _.replace(argumentSplited, ',', '')
+    //var test = _.replace(_.toString(argumentSplited), ',', '')
+    var test = _.toString(_.join(argumentSplited, ''))
+    console.log(_.isString(test))
     console.log(test)
   }
 }
