@@ -4,6 +4,19 @@ function algie_42() {
 };
 
 function algie_complete_with(initialArray, untilThisSize, constantToInsert) {
-  // body...
+  if(_.isArray(initialArray) && _.isInteger(untilThisSize)) {
+    if (initialArray.length < untilThisSize) {
+      var arrayOfConstantToInsert = [];
+      arrayOfConstantToInsert.length = untilThisSize - initialArray.length;
+      arrayOfConstantToInsert = _.fill(arrayOfConstantToInsert, constantToInsert, 0, arrayOfConstantToInsert.length);
+      return _.concat(initialArray, arrayOfConstantToInsert)
+    } 
+    else {
+      return initialArray;
+    }
+  }
+  else {
+    return false;
+  }
 }
 
