@@ -3,12 +3,20 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_complete_with(initialArray, untilThisSize, constantToInsert) {
+  if(_.isArray(initialArray) && _.isInteger(untilThisSize)) {
+    if (initialArray.length < untilThisSize) {
+      var arrayOfConstantToInsert = [];
+      arrayOfConstantToInsert.length = untilThisSize - initialArray.length;
+      arrayOfConstantToInsert = _.fill(arrayOfConstantToInsert, constantToInsert, 0, arrayOfConstantToInsert.length);
+      return _.concat(initialArray, arrayOfConstantToInsert)
+    } 
+    else {
+      return initialArray;
+    }
+  }
+  else {
+    return false;
+  }
 }
-
-function algie_generateWord() {
-  // return "zaropi"
-}
-
 
