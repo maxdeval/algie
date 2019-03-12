@@ -3,12 +3,18 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
-}
 
-function algie_generateWord() {
-  // return "zaropi"
+function algie_before_max(array) {
+  if(_.isArray(array))  {
+    var arrayOfInteger = _.filter(array, function (value) {
+      return _.isInteger(value)
+    })
+    var sortedArray = _.sortBy(arrayOfInteger)
+    var beforeMax = sortedArray.length - 2
+    return sortedArray[beforeMax]
+  }
+  else {
+    return false
+  }
 }
-
 
