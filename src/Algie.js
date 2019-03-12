@@ -3,11 +3,19 @@ function algie_42() {
   return 42;
 };
 
+
 function algie_before_max(array) {
   var sortedArray = _.sortBy(array)
-  var arrayOfInteger = _.each(sortedArray, function(value){
+/*  var arrayOfInteger = _.each(sortedArray, function(value){
     if (_.isInteger(value)) {
-      arrayOfInteger.push(value)
+      console.log(value)
+    }
+  })*/
+  var arrayOfInteger = _.map(sortedArray, function (value) {
+    _.each(sortedArray, value) {
+      if(_.isInteger(value)){
+        return value
+      }
     }
   })
   console.log(arrayOfInteger)
