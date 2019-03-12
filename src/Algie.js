@@ -4,13 +4,17 @@ function algie_42() {
 };
 
 function algie_numbers_after(number) {
-  var result = [];
-  var sum = number + 1;
-  result[0] = number
-  for(var i=0; i<6; i++) {
-    result[i] = sum + i
+  if(_.isInteger(number)){
+    var result = [];
+    var sum = number + 1;
+    result[0] = number;
+    for(var i=0; i<6; i++) {
+      result[i] = sum + i
+    }
+    return result;    
   }
-  return result;
+  else {
+    return false;
+  }
 }
 
-algie_numbers_after(23)
