@@ -4,5 +4,15 @@ function algie_42() {
 };
 
 function algie_is_decreasing(array) {
-  // body...
+  if(_.isArray(array)) {
+  _.each(array, function(value, key) {
+    if(value > array[key]) {
+      return false;
+    }
+  })
+  return true;    
+  }
+  else {
+    return false
+  }
 }
