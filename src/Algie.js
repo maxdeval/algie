@@ -3,15 +3,17 @@ function algie_42() {
   return 42;
 };
 
-function countingVowels(argument) {
+function countingVowels(string) {
   return (subject.match(/[aeiou]/gi) || []).length;
 }
 
-function countingConsonants(argument) {
+function countingConsonants(string) {
   return (subject.match(/[bcdfghjklmnpqrstvwxz]/gi) || []).length;
 }
 
-function algie_string_to_hash(string) {
-  // body...
+function algie_string_to_hash(sentence) {
+  splittedSentence = _.split(sentence, ' ')
+  console.log(splittedSentence)
 }
 
+algie_string_to_hash('hello abc')
