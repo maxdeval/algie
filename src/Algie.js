@@ -4,6 +4,13 @@ function algie_42() {
 };
 
 function algie_numbers_after(number) {
-  // body...
+  var result = [];
+  var sum = number;
+  result[0] = number
+  for(var i=0; i<6; i++) {
+    result[i] = result[i - 1] + 1
+  }
+  console.log(result)
 }
 
+algie_numbers_after(23)
