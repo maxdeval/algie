@@ -12,10 +12,8 @@ function algie_before_max(array) {
     }
   })*/
   var arrayOfInteger = _.map(sortedArray, function (value) {
-    _.each(sortedArray, value) {
-      if(_.isInteger(value)){
-        return value
-      }
+        if(_.isInteger(value)){
+          return value
     }
   })
   console.log(arrayOfInteger)
