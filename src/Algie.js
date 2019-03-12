@@ -4,7 +4,10 @@ function algie_42() {
 };
 
 function algie_cut_and_multiply_number(number) {
-  // body...
+  var splittedNumber = _.map(number.toString().split(''), function(value){
+    return _.toInteger(value)
+  })
+  console.log(splittedNumber)
 }
 
-
+algie_cut_and_multiply_number(42)
