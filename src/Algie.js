@@ -35,4 +35,3 @@ function algie_generate_word() {
 
 }
 
-algie_generate_word()
