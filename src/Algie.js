@@ -22,16 +22,22 @@ function algie_generate_word() {
                  'x','z'] 
 
   var vowel = ['a','e', 'i', 'o', 'u', 'y']
-  var result;
+  var result = [];
+  var numberForVowel;
+  var numberForConsonant;
 
   for(var i = 1 ; i<7; i++) {
     if( isEven(i) ) {
-      var numberForVowel = Math.floor(Math.random() * vowel.length);
-      result.push(consonant[numberForVowel])
+      numberForVowel = Math.floor(Math.random() * vowel.length);
+      console.log(numberForVowel)
+      console.log(consonant[numberForVowel])
+      result[i] = consonant[numberForVowel]
     }
     else {
-      var numberForConsonant = Math.floor(Math.random() * consonant.length);
-      result.push(consonant[numberForConsonant])
+      numberForConsonant = Math.floor(Math.random() * consonant.length);
+      console.log(numberForConsonant)
+      console.log(consonant[numberForConsonant])
+      result[i] = consonant[numberForConsonant]
     }
   }
 
