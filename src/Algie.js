@@ -3,12 +3,22 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_cut_and_multiply_number(number) {
+  
+  if(_.isNumber(number)){
+
+    var splittedNumber = _.map(number.toString().split(''), function(value){
+        return _.toInteger(value)
+      })
+
+    return _.reduce(splittedNumber, function(sum, number){
+      return _.multiply(sum, number)
+    })
+  }
+
+  else {
+    return false
+  }
+
 }
-
-function algie_generateWord() {
-  // return "zaropi"
-}
-
-
+  
