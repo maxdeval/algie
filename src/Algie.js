@@ -29,15 +29,13 @@ function algie_generate_word() {
   for(var i = 1 ; i<7; i++) {
     if( isEven(i) ) {
       numberForVowel = Math.floor(Math.random() * vowel.length);
-      console.log(numberForVowel)
-      console.log(consonant[numberForVowel])
-      result[i] = consonant[numberForVowel]
+      console.log('Vowel')
+      result[i-1] = vowel[numberForVowel]
     }
     else {
       numberForConsonant = Math.floor(Math.random() * consonant.length);
-      console.log(numberForConsonant)
-      console.log(consonant[numberForConsonant])
-      result[i] = consonant[numberForConsonant]
+      console.log('Consonant')
+      result[i-1] = consonant[numberForConsonant]
     }
   }
 
