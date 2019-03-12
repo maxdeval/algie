@@ -3,12 +3,6 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_index_hash(hash) {
+  // body...
 }
-
-function algie_generateWord() {
-  // return "zaropi"
-}
-
-
