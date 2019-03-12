@@ -11,9 +11,23 @@ function countingConsonants(string) {
   return (subject.match(/[bcdfghjklmnpqrstvwxz]/gi) || []).length;
 }
 
+function groupedVowelsAndConsonents(word) {
+  return _.groupBy(countingConsonants(word), countingVowels(word))
+}
+
 function algie_string_to_hash(sentence) {
+
+  var numberOfVowels
+  var numberOfConsonants
+
   splittedSentence = _.split(sentence, ' ')
-  console.log(splittedSentence)
+  console.log(splittedSentence[0])
+
+  console.log(groupedVowelsAndConsonents(splittedSentence[0]))
+/*  _.each(splittedSentence, function(value){
+    numberOfConsonants = 
+  })*/
+
 }
 
 algie_string_to_hash('hello abc')
