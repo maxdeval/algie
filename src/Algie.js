@@ -4,13 +4,21 @@ function algie_42() {
 };
 
 function algie_cut_and_multiply_number(number) {
-  var splittedNumber = _.map(number.toString().split(''), function(value){
-    return _.toInteger(value)
-  })
+  
+  if(_.isNumber(number)){
 
-  return _.reduce(splittedNumber, function(sum, number){
-    return _.multiply(sum, number)
-  })
+    var splittedNumber = _.map(number.toString().split(''), function(value){
+        return _.toInteger(value)
+      })
+
+    return _.reduce(splittedNumber, function(sum, number){
+      return _.multiply(sum, number)
+    })
+  }
+
+  else {
+    return false
+  }
+
 }
-
-algie_cut_and_multiply_number(42)
+  
