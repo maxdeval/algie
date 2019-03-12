@@ -3,12 +3,18 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_numbers_after(number) {
+  if(_.isInteger(number)){
+    var result = [];
+    var sum = number + 1;
+    result[0] = number;
+    for(var i=0; i<6; i++) {
+      result[i] = sum + i
+    }
+    return result;    
+  }
+  else {
+    return false;
+  }
 }
-
-function algie_generateWord() {
-  // return "zaropi"
-}
-
 
