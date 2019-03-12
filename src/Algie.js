@@ -3,12 +3,16 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_is_decreasing(array) {
+  if(_.isArray(array)) {
+  _.each(array, function(value, key) {
+    if(value > array[key]) {
+      return false;
+    }
+  })
+  return true;    
+  }
+  else {
+    return false
+  }
 }
-
-function algie_generateWord() {
-  // return "zaropi"
-}
-
-
