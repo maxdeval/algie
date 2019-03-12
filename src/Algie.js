@@ -5,12 +5,12 @@ function algie_42() {
 
 function algie_numbers_after(number) {
   var result = [];
-  var sum = number;
+  var sum = number + 1;
   result[0] = number
   for(var i=0; i<6; i++) {
-    result[i] = result[i - 1] + 1
+    result[i] = sum + i
   }
-  console.log(result)
+  return result;
 }
 
 algie_numbers_after(23)
