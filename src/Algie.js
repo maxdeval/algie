@@ -3,12 +3,35 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function isEven(number) {
+  if(number % 2 === 0) {
+    return true
+  }
+  else {
+    return false
+  }
 }
 
-function algie_generateWord() {
-  // return "zaropi"
-}
+function algie_generate_word() {
 
+  var consonant = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x','z'] 
+  var vowel = ['a','e', 'i', 'o', 'u', 'y']
+  var result = [];
+  var numberForVowel;
+  var numberForConsonant;
+
+  for(var i = 1 ; i<7; i++) {
+    if( isEven(i) ) {
+      numberForVowel = Math.floor(Math.random() * vowel.length);
+      result[i-1] = vowel[numberForVowel]
+    }
+    else {
+      numberForConsonant = Math.floor(Math.random() * consonant.length);
+      result[i-1] = consonant[numberForConsonant]
+    }
+  }
+
+  return (_.join(result, ''))
+
+}
 
