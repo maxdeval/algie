@@ -3,12 +3,26 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
-}
-
-function algie_generateWord() {
-  // return "zaropi"
+function algie_largest_string(array) {
+  if(_.isArray(array)){
+    var length = 0;
+    var largestString = "";
+    _.each(array, function(value , key) {
+      if(_.isString(value)){
+        if(array[key].length > length) {
+          length = array[key].length;
+          largestString = array[key];
+        }       
+      }
+      else {
+        throw "A value in the array is not a string";
+      }
+    })
+    return largestString;    
+  }
+  else {
+    return false;
+  }
 }
 
 
