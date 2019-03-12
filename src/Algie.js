@@ -4,7 +4,13 @@ function algie_42() {
 };
 
 function algie_generate_word() {
-  // body...
+  var consonant = ['b', 'c', 'd', 'f',
+                 'g', 'h', 'j', 'k', 'l',
+                 'm', 'n', 'p', 'q', 'r',
+                 's', 't', 'v', 'w',
+                 'x','z'] 
+
+  var vowel = ['a','e', 'i', 'o', 'u', 'y']
 }
 
 
