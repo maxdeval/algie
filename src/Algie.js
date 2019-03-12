@@ -7,7 +7,10 @@ function algie_cut_and_multiply_number(number) {
   var splittedNumber = _.map(number.toString().split(''), function(value){
     return _.toInteger(value)
   })
-  console.log(splittedNumber)
+
+  return _.reduce(splittedNumber, function(sum, number){
+    return _.multiply(sum, number)
+  })
 }
 
 algie_cut_and_multiply_number(42)
