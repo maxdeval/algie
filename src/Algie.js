@@ -18,4 +18,3 @@ function algie_before_max(array) {
   }
 }
 
-algie_before_max(["1", "z", 4, 3, 65, /^/, 42, 51, 12])
