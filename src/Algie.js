@@ -3,6 +3,17 @@ function algie_42() {
   return 42;
 };
 
+function isEven(number) {
+  if(number % 2 === 0) {
+    return true
+  }
+  else {
+    return false
+  }
+}
+
+
+
 function algie_generate_word() {
   var consonant = ['b', 'c', 'd', 'f',
                  'g', 'h', 'j', 'k', 'l',
@@ -11,12 +22,19 @@ function algie_generate_word() {
                  'x','z'] 
 
   var vowel = ['a','e', 'i', 'o', 'u', 'y']
+  var result;
 
-  var numberForConsonant = Math.floor(Math.random() * consonant.length);
-  var numberForVowel = Math.floor(Math.random() * vowel.length);
+  for(var i = 1 ; i<7; i++) {
+    if( isEven(i) ) {
+      var numberForVowel = Math.floor(Math.random() * vowel.length);
+      result.push(consonant[numberForVowel])
+    }
+    else {
+      var numberForConsonant = Math.floor(Math.random() * consonant.length);
+      result.push(consonant[numberForConsonant])
+    }
+  }
 
-
-  var result = consonant[numberForConsonant]
   console.log(result)
 
 }
