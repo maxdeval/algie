@@ -3,6 +3,14 @@ function algie_42() {
   return 42;
 };
 
+function countingVowels(argument) {
+  return (subject.match(/[aeiou]/gi) || []).length;
+}
+
+function countingConsonants(argument) {
+  return (subject.match(/[bcdfghjklmnpqrstvwxz]/gi) || []).length;
+}
+
 function algie_string_to_hash(string) {
   // body...
 }
