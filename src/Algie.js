@@ -3,12 +3,17 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_initials(string) {
+  if(_.isString(string)){
+    splittedString = _.split(string, " ")
+    return _.join(_.map(splittedString, function(element) {
+      return element.substring(0,1).toUpperCase();
+    }), '')
+  }
+  else {
+    return false
+  }
 }
 
-function algie_generateWord() {
-  // return "zaropi"
-}
-
+algie_initials("One great journey")
 
