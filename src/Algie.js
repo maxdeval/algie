@@ -4,8 +4,16 @@ function algie_42() {
 };
 
 function algie_simplify_word(string) {
-  // body...
-  
+  var stringSplited = string.toString().split('')
+  var counter = 0
+  var result = [];
+  _.each(stringSplited, function(value){
+    counter = counter + 1
+  })
+  result[0] = _.first(stringSplited)
+  result[1] = counter - 2;
+  result[2] = _.last(stringSplited)
+  return _.join(result, '')
 }
 
-
+algie_simplify_word("accessibility")
