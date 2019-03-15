@@ -4,10 +4,15 @@ function algie_42() {
 };
 
 function algie_initials(string) {
-  splittedString = _.split(string, " ")
-  return _.join(_.map(splittedString, function(element) {
-    return element.substring(0,1).toUpperCase();
-  }), '')
+  if(_.isString(string)){
+    splittedString = _.split(string, " ")
+    return _.join(_.map(splittedString, function(element) {
+      return element.substring(0,1).toUpperCase();
+    }), '')
+  }
+  else {
+    return false
+  }
 }
 
 algie_initials("One great journey")
