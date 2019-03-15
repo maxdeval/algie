@@ -4,3 +4,6 @@ function algie_42() {
 };
 
 
+function algie_array_of_boolean(array) {
+  // body...
+}
