@@ -3,6 +3,6 @@ function algie_42() {
   return 42;
 };
 
-function algie_index_hash(hash) {
+function algie_last_will_be_first(array) {
   // body...
 }
