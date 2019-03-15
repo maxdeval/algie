@@ -602,7 +602,7 @@ describe("Algie", function() {
       expect(algie_max_of_consecutive_in_array(["a", "a", "a", "a"])).toEqual(4);
     });
     it("should return 0 when array is empty", function() {
-      expect(algie_max_of_consecutive_in_array([])).toEqual(4);
+      expect(algie_max_of_consecutive_in_array([])).toEqual(0);
     });
   });
 
