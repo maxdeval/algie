@@ -3,12 +3,21 @@ function algie_42() {
   return 42;
 };
 
-function algie_allMultiplyBy(array, number) {
-  // Write function here
+function algie_simplify_word(string) {
+  if(_.isString(string)){
+    var stringSplited = string.toString().split('')
+    var counter = 0
+    var result = [];
+    _.each(stringSplited, function(value){
+      counter += 1
+    })
+    result[0] = _.first(stringSplited)
+    result[1] = counter - 2;
+    result[2] = _.last(stringSplited)
+    return _.join(result, '')
+  }
+  else {
+    return false
+  }
 }
-
-function algie_generateWord() {
-  // return "zaropi"
-}
-
 
