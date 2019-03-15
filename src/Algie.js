@@ -23,4 +23,3 @@ function algie_add2_dates(date1, date2) {
   }
 }
 
-algie_add2_dates(new Date('January 1, 2000 00:00:01'), new Date('January 1, 2000 00:00:01'))
