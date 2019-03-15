@@ -4,5 +4,13 @@ function algie_42() {
 };
 
 function algie_print_to_zero(number) {
-  // body...
+  var result=[];
+  console.log(number)
+  for(var i = 0; i < number; i++) {
+    console.log(i)
+    result[i] = i
+  }
+  console.log(_.reverse(result))
 }
+
+algie_print_to_zero(5)
