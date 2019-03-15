@@ -18,5 +18,3 @@ function algie_foo_bar_qix_zzz(number) {
   }
 }
 
-algie_foo_bar_qix_zzz(null)
-
