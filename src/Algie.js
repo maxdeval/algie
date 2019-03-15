@@ -154,4 +154,3 @@ function algie_closest_of2000(array) {
   }
 }
 
-algie_closest_of2000([new Date('March 13, 2006 03:24:00'), new Date('June 13, 1995 03:24:00'), new Date('December 8, 2012 03:24:00'), new Date('May 3, 2019 03:24:00')])
