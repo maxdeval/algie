@@ -4,13 +4,10 @@ function algie_42() {
 };
 
 function algie_initials(string) {
-  var names = string.split(' '),
-      initials = names[0].substring(0, 1).toUpperCase();
-  
-  if (names.length > 1) {
-      initials += names[names.length - 1].substring(0, 1).toUpperCase();
-  }
-  return initials;
+  test = _.split(string, " ")
+  console.log(_.map(test, function(element) {
+    return element.substring(0,1).toUpperCase();
+  }))
 }
 
 algie_initials("One great journey")
