@@ -5,12 +5,11 @@ function algie_42() {
 
 function algie_print_to_zero(number) {
   var result=[];
-  console.log(number)
   for(var i = 0; i < number; i++) {
-    console.log(i)
     result[i] = i
   }
   console.log(_.reverse(result))
+  console.log(_.join(result, ''))
 }
 
 algie_print_to_zero(5)
