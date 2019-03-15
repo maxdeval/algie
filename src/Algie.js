@@ -25,4 +25,3 @@ function algie_print_to_zero(number) {
   }
 }
 
-algie_print_to_zero(-12)
