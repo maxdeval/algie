@@ -4,5 +4,9 @@ function algie_42() {
 };
 
 function algie_last_will_be_first(array) {
-  // body...
+  var temp1 = _.last(array)
+  var temp2 = _.first(array)
+  _.last(array) = temp2
+  _.first(array) = temp1
+  console.log(array)
 }
