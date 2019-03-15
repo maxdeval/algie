@@ -11,6 +11,7 @@ function algie_max_of_consecutive_in_array(array) {
     }
   })
   console.log(counter)
+
 }
 
 algie_max_of_consecutive_in_array(["a", "a", "c", "c", "c", "z"])
