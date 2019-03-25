@@ -4,3 +4,6 @@ function algie_42() {
 };
 
 
+function algie_string_weight(string) {
+  // body...
+}
