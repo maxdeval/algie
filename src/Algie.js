@@ -1,3 +1,6 @@
-function algie_robust_array(argument) {
-  // body...
+function algie_robust_array(array) {
+  if(_.isArray(array)) {
+    res = false
+  }
+  return false
 }
