@@ -1,5 +1,4 @@
 function algie_actual_matches(array1, array2) {
-  var res = ""
   if (_.isArray(array1) && _.isArray(array2)) {
     if(array1.length != array2.length) {
       return "size error"
@@ -22,7 +21,10 @@ function algie_actual_matches(array1, array2) {
   }
 
   var incorrect = array1.length - _.toInteger(_.difference(array1, array2).length)
-     return counter + " exact match and " + incorrect + " incorrect match"
+  return counter + " exact match and " + incorrect + " incorrect match"
+  }
+  else {
+    return "type error"
   }
 }
 
