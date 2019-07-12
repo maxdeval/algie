@@ -1,21 +1,18 @@
 function algie_fire_langage(sentence){
-  res = ""
-  
   if(_.isString(sentence)){
+    res = []
     var splitted_sentence = ""
     splitted_sentence = _.split(sentence, "")
-    new_sentence = []
     _.each(splitted_sentence, function(value, key){
-      new_sentence.push(value)
+      res.push(value)
       if(value === "a" || value === "e"|| value === "i" || value === "o" || value === "u" || value === "y") {
-        new_sentence.push("f")
+        res.push("f")
+        res.push(value)
       }
     })
-    console.log(_.join(new_sentence, ''))
-    return res
+    return _.join(res, '')
   }
-  return res
+  return ""
 }
-
 
 algie_fire_langage("ab")
