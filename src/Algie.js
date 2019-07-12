@@ -1,23 +1,18 @@
-function algie_ordinal_suffix(number){
-  if(_.isInteger(number)) {
-    var lastOne = number.toString().split('').pop();
-    console.log(lastOne)
-    if(lastOne === '1') {
-      return 'st'
-    }
-    if(lastOne === '2') {
-      return 'nd'
-    }
-    if(lastOne === '3') {
-      return 'rd'
-    }
-    if(lastOne === '4' || lastOne === '7' || lastOne === '9') {
-      return 'th'
-    }     
+function algie_fire_langage(sentence){
+  if(_.isString(sentence)){
+    res = []
+    var splitted_sentence = ""
+    splitted_sentence = _.split(sentence, "")
+    _.each(splitted_sentence, function(value){
+      res.push(value)
+      if(value === "a" || value === "e"|| value === "i" || value === "o" || value === "u" || value === "y") {
+        res.push("f")
+        res.push(value)
+      }
+    })
+    return _.join(res, '')
   }
-  else {
-    return ''
-  }
+  return ""
 }
 
-algie_ordinal_suffix(141)
+algie_fire_langage("ab")
