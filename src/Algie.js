@@ -2,15 +2,17 @@ function algie_robust_array(array) {
   if(_.isArray(array)) {
     var res = false
     var temp1 = array
-    var sum = 0
+    var sum1 = 0
     _.each(temp1, function(value,key){
-      console.log("temp1")
-      console.log(temp1)
+/*      console.log("temp1")
+      console.log(temp1)*/
+      console.log("temp1.length")
+      console.log(temp1.length)
       _.pullAt(temp1, 0)
-      sum = _.reduce(temp1, function(sum, n) { return sum + n; }, 0)
+      sum1 = _.reduce(temp1, function(sum, n) { return sum + n; }, 0)
       console.log("value") 
       console.log(value) 
-      if (value > sum) {
+      if (value > sum1) {
         console.log("true")
         return true
       }
@@ -25,4 +27,4 @@ function algie_robust_array(array) {
   }
 }
 
-algie_robust_array([7, 3, 2])
+algie_robust_array([17, 9, 4, 2, 1])
