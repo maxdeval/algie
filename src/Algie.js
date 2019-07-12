@@ -9,7 +9,7 @@ var letterValue = function(str) {
     return str.split('').map(letterValue);
 }
 
-var algie_cups_epartition = function(kids) {
+function algie_cups_repartition(kids) {
 
   //Number of cups kids should have
   var cupsByKid = _.meanBy(kids, function(kids) {
@@ -71,3 +71,4 @@ var algie_cups_epartition = function(kids) {
     return _.toArray(kids)
   }
 }
+
