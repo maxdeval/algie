@@ -5,7 +5,12 @@ function randomArray(length, max) {
 }
 
 function compareArray(array1, array2) {
-  // body...
+  if (_.first(array1) > _.last(array2)) {
+    return " Player1 wins with all cards" + _.toArray(_.concat(array1, array2))
+  }
+  else {
+    return " Player2 wins with all cards" + _.toArray(_.concat(array1, array2))
+  }
 }
 
 function algie_playWar() {
@@ -15,8 +20,7 @@ function algie_playWar() {
   var player1Hands = randomArray(_.toInteger(length), _.toInteger(max)).sort()
   var player2Hands = randomArray(_.toInteger(length), _.toInteger(max)).sort(function(a, b){return b-a});
 
-  console.log(player1Hands)
-  console.log(player2Hands)
+  return compareArray(player1Hands, player2Hands)
 
 }
 
