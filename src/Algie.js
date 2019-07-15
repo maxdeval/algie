@@ -14,4 +14,19 @@ function printBoard(board) {
          board[30]+board[31]+board[32]+board[33]+board[34]+board[35]
 }
 
+function move(message, board, coin) {
+  var answer = prompt("chose between 1-36 or q to leave")
+  var answerToInteger = _.toInteger(answer)
+  if(answerToInteger >= 1 && answerToInteger <= 36) {
+    board[answerToInteger - 1] = coin
+    console.log(printBoard(board))
+  }
+  else if(answer === 'q') {
+    throw 'player ' + coin +' wants to leave'
+  }
+  else {
+    move('error, ', board, coin)
+  }
+}
+
 algie_connect4()
