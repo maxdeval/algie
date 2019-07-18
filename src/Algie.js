@@ -32,25 +32,47 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   var grid = [row1, row2, row3, row4, row5, row6]
   var counter
 
-  for (var i = 0; i < grid.length; i++) {
+/*  for (var i = 0; i < grid.length; i++) {
     for (var j = 0; j < row1.length; j++) {
+
       if (_.size(row1) != j && grid[i][j] === grid[i][j+1] && grid[i][j] != " ") {
         temp = grid[i][j]
-        console.log("counter " + counter)
         counter = counter + 1
       }
-      console.log("temp " + temp)
-      console.log("grid[i][j] " + grid[i][j])
-      console.log("_.size(row1) " + _.size(row1) + " j " + j)
+
       if (_.size(row1)-1 === j && temp === grid[i][j] && grid[i][j] != " ") {
-        console.log("counter2 " + counter)
         counter = counter + 1
       }      
       if (counter === 4) {
         return true
       }
+
       if (grid[i][j] != grid[i][j+1]) {
-        //console.log("dans le else")
+        counter = 0
+      }
+    }
+  }*/
+  var i 
+  var j
+
+  for (i = 0; i < grid.length; j++) {
+    for (j = 0; j < row1.length; i++) {
+        console.log(counter)
+        console.log("i = " + i + " j = " + j)
+        console.log("grid[j][i] " + grid[j][i])
+        console.log("grid[j][i+1] " + grid[j][i+1])
+      if (_.size(row1) != i && grid[j][i] === grid[j][i+1] && grid[i][j] != " ") {
+        temp = grid[j][i]
+        counter = counter + 1
+      }
+      if (_.size(row1)-1 === i && temp === grid[j][i] && grid[j][i] != " ") {
+        counter = counter + 1
+      }      
+      if (counter === 4) {
+        return true
+      }
+
+      if (grid[j][i] != grid[j][i+1]) {
         counter = 0
       }
     }
@@ -61,12 +83,12 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 }
 
 algie_connect4(
-        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", "o", " ", " ", " "],
         [" ", " ", "o", "x", "x", " "],
-        ["x", "o", "x", "x", "o", "x"],
-        ["o", "x", "o", "o", "o", "o"],
+        ["x", "o", "o", "x", "o", "x"],
+        ["o", "x", "o", "o", "x", "o"],
         ["o", "x", "o", "x", "o", "x"],
-        ["x", "o", "x", "o", "x", "o"],
+        ["x", "o", "o", "o", "x", "o"],
         )
 
 
