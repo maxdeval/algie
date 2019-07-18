@@ -1,23 +1,31 @@
-function algie_ordinal_suffix(number){
-  if(_.isInteger(number)) {
-    var lastOne = number.toString().split('').pop();
-    console.log(lastOne)
-    if(lastOne === '1') {
-      return 'st'
+function algie_actual_matches(array1, array2) {
+  if (_.isArray(array1) && _.isArray(array2)) {
+    if(array1.length != array2.length) {
+      return "size error"
     }
-    if(lastOne === '2') {
-      return 'nd'
+
+  if (_.isEmpty(_.xor(array1, array2))) {
+    return array1.length + " exact match and 0 incorrect match"
+  }
+
+  var counter = 0;
+  for(var i = 0; i < array1.length; i++) {
+    if (_.isInteger(array1[i]) && _.isInteger(array2[i])) {
+      if(array1[i] === array2[i]) {
+        counter += 1
+      }
+      else {
+        return "wrong type of argument"
+      }
     }
-    if(lastOne === '3') {
-      return 'rd'
-    }
-    if(lastOne === '4' || lastOne === '7' || lastOne === '9') {
-      return 'th'
-    }     
+  }
+
+  var incorrect = array1.length - _.toInteger(_.difference(array1, array2).length)
+  return counter + " exact match and " + incorrect + " incorrect match"
   }
   else {
-    return ''
+    return "type error"
   }
 }
 
-algie_ordinal_suffix(141)
+algie_actual_matches([1, "bbbb", 2, 1, "aa"], [1, 3, 3, 4, 5])
