@@ -34,17 +34,22 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 
   for (var i = 0; i < grid.length; i++) {
     for (var j = 0; j < row1.length; j++) {
-        //console.log(grid[i][j])
-        console.log(grid[i][j+1])
-      if (grid[i][j] === grid[i][j+1] && grid[i][j] != " ") {
-        console.log("dans le if")
+      if (_.size(row1) != j && grid[i][j] === grid[i][j+1] && grid[i][j] != " ") {
+        temp = grid[i][j]
+        console.log("counter " + counter)
         counter = counter + 1
       }
+      console.log("temp " + temp)
+      console.log("grid[i][j] " + grid[i][j])
+      if (_.size(row1) === j && temp === grid[i][j] && grid[i][j] != " ") {
+        console.log("counter2 " + counter)
+        counter = counter + 1
+      }      
       if (counter === 4) {
         return true
       }
       if (grid[i][j] != grid[i][j+1]) {
-        console.log("dans le else")
+        //console.log("dans le else")
         counter = 0
       }
     }
@@ -55,7 +60,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 }
 
 algie_connect4(
-        [" kkk", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
         [" ", " ", "o", "x", "x", " "],
         ["x", "o", "x", "x", "o", "x"],
         ["o", "x", "o", "o", "o", "o"],
