@@ -8,6 +8,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 
   var count = 0
   for (var i = 0; i<winCombination.length; i++) {
+    count = 0
     for (var j = 0; j<winCombination.length; j++) {
       if(test[winCombination[i][j]] === 'x') {
         count ++
@@ -19,6 +20,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   }
 
   for (var i = 0; i<winCombination.length; i++) {
+    console.log(count)
     for (var j = 0; j<winCombination.length; j++) {
       if(test[winCombination[i][j]] === 'o') {
         count ++
@@ -35,11 +37,11 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 
 algie_connect4(
         [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", "o", "x", "x", " "],
+        ["x", "o", "x", "x", "o", "x"],
+        ["o", "x", "o", "o", "o", "o"],
+        ["o", "x", "o", "x", "o", "x"],
+        ["x", "o", "x", "o", "x", "o"],
         )
 
 
