@@ -105,26 +105,33 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   var grid = [row1, row2, row3, row4, row5, row6]
   var counter
 
-  for (var i = 0; i < grid.length; i++) {
-    for (var j = 0; j < row1.length; j++) {
-      if (_.size(row1) != j && grid[i][j] === grid[i][j+1] && grid[i][j] != " ") {
-        temp = grid[i][j]
-        console.log("counter " + counter)
+  var row, column, coin
+
+/*  for (row = 0; row < grid.length; row++) {
+    for (column = 0; column < row1.length; column++) {
+      if (_.size(row1) != column && grid[row][column] === grid[row][column+1] && grid[row][column] != " ") {
+        temp = grid[row][column]
         counter = counter + 1
       }
-      console.log("temp " + temp)
-      console.log("grid[i][j] " + grid[i][j])
-      console.log("_.size(row1) " + _.size(row1) + " j " + j)
-      if (_.size(row1)-1 === j && temp === grid[i][j] && grid[i][j] != " ") {
-        console.log("counter2 " + counter)
+      if (_.size(row1)-1 === column && temp === grid[row][column] && grid[row][column] != " ") {
         counter = counter + 1
       }      
       if (counter === 4) {
         return true
       }
-      if (grid[i][j] != grid[i][j+1]) {
-        //console.log("dans le else")
+      if (grid[row][column] != grid[row][column+1]) {
         counter = 0
+      }
+    }
+  }*/
+
+  for (column = 0; column < row1.length; column++) {
+    for (row = 0; row < grid.length - 3; row++) {
+      coin = grid[row][column]
+      if ("x" || "o") {
+        if (grid[row+1][column] === coin && grid[row+2][column] === coin && grid[row+3][column] === coin) {
+          return true
+        }
       }
     }
   }
@@ -135,7 +142,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 
 algie_connect4(
         [" ", " ", "o", " ", " ", " "],
-        [" ", " ", "o", "x", "x", " "],
+        [" ", "x", "o", "x", "x", " "],
         ["x", "x", "x", "x", "x", "x"],
         ["o", "x", "x", "o", "x", "o"],
         ["o", "x", "x", "x", "o", "x"],
