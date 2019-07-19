@@ -36,7 +36,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   for(row = 0; row < grid.length; row++) {
     for (column = 0; column < row1.size - 3; column++) {
       coin = grid[row][column]
-      if ('x' || 'y') {
+      if (coin === 'x' || coin === 'o') {
         if (grid[row][column+1] === coin && grid[row][column+2] === coin && grid[row][column+3] === color) {
           console.log("in row")
           return true
@@ -48,7 +48,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   for (column = 0; column < row1.length; column++) {
     for (row = 0; row < grid.length - 3; row++) {
       coin = grid[row][column]
-      if ("x" || "o") {
+      if (coin === "x" || coin === "o") {
         if (grid[row+1][column] === coin && grid[row+2][column] === coin && grid[row+3][column] === coin) {
           console.log("in column")
           return true
@@ -60,7 +60,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   for(column = 0; column < row1.length - 3; column++) {
     for (row = 0; row < grid.length - 3; row++) {
       coin = grid[row][column]
-      if ("x" || "o") {
+      if (coin === "x" || coin === "o") {
         if (grid[row+1][column+1] === coin && grid[row+2][column+2] === coin && grid[row+3][column+3] === coin) {
           console.log("second part")
           return true
@@ -72,7 +72,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   for(column = 0; column < row1.length - 3; column++) {
     for (row = 3; row < grid.length; row++) {
       coin = grid[row][column]
-      if ("x" || "o") { 
+      if (coin === "x" || coin === "o") { 
         if (grid[row-1][column+1] === coin && grid[row-2][column+2] === coin && grid[row-3][column+3] === coin) {
           console.log("first part")
           return true
@@ -87,12 +87,12 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 }
 
 algie_connect4(
-        [" ", " ", "k", " ", " ", " "],
-        [" ", " ", "o", "x", "x", " "],
-        ["x", "o", "x", "x", "o", "o"],
-        ["o", "x", "o", "o", "x", "o"],
-        ["o", "x", "o", "x", "o", "x"],
-        ["x", "o", "x", "o", "x", "o"],
+        ["o", "o", "o", "o", " ", " "],
+        ["k", " ", " ", " ", " ", " "],
+        ["c", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " "],
         )
 
 
