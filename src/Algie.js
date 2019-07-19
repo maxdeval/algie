@@ -1,4 +1,4 @@
-function checkLine(a,b,c,d) {
+/*function checkLine(a,b,c,d) {
     // Check first cell non-zero and all cells match
     return ((a != 0) && (a == b) && (a == c) && (a == d));
 }
@@ -6,31 +6,70 @@ function checkLine(a,b,c,d) {
 function checkWin(grid) {
 
     // bas
-    for (r = 0; r < _.floor(_.divide(_.size(grid), 2)); r++)
+    for (r = 0; r < _.size(grid); r++)
         for (c = 0; c < _.size(grid); c++)
             if (checkLine(grid[r][c], grid[r+1][c], grid[r+2][c], grid[r+3][c]))
                 return true;
 
     // droit
     for (r = 0; r < _.size(grid); r++)
-        for (c = 0; c < _.floor(_.divide(_.size(grid), 2)); c++)
+        for (c = 0; c < _.size(grid); c++)
             if (checkLine(grid[r][c], grid[r][c+1], grid[r][c+2], grid[r][c+3]))
                 return true;
 
     // bas droite
-    for (r = 0; r < _.floor(_.divide(_.size(grid), 2)); r++)
-        for (c = 0; c < _.floor(_.divide(_.size(grid), 2)); c++)
+    for (r = 0; r < _.size(grid); r++)
+        for (c = 0; c < _.size(grid); c++)
             if (checkLine(grid[r][c], grid[r+1][c+1], grid[r+2][c+2], grid[r+3][c+3]))
                 return true;
 
     // bas gauche
-    for (r = 3; r < _.floor(_.divide(_.size(grid), 2)); r++)
-        for (c = 0; c < _.floor(_.divide(_.size(grid), 2)); c++)
+    for (r = 3; r < _.size(grid); r++)
+        for (c = 0; c < _.size(grid); c++)
             if (checkLine(grid[r][c], grid[r-1][c+1], grid[r-2][c+2], grid[r-3][c+3]))
                 return true;
     return false;
 }
+*/
 
+/*function checkColums(board, columns, rows) {
+  for (var y = 0; y < columns; y++) {
+    var consecutive = 0;
+    for (var x = 0; x < rows; x++) {
+      if (board[y][x] == "x") {
+        consecutive++;
+        if (consecutive == 4) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+}
+
+function checkRows(board, columns, rows) {
+  for (var x = 0; x < rows; x++) {
+    var consecutive = 0;
+    for (var y = 0; y < columns; y++) {
+      if (board[y][x] == 1) {
+        consecutive++;
+        if (consecutive == 4) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+}
+
+// Example:
+var board = [
+  [1, 0, 1, 0],
+  [0, 1, 1, 0],
+  [1, 0, 1, 1],
+  [1, 1, 1, 0]
+];
+*/
 
 function algie_connect4(row1, row2, row3, row4, row5, row6) {
 
@@ -63,18 +102,44 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
     }
   }*/
 
-  return checkWin(grid)
+  var grid = [row1, row2, row3, row4, row5, row6]
+  var counter
+
+  for (var i = 0; i < grid.length; i++) {
+    for (var j = 0; j < row1.length; j++) {
+      if (_.size(row1) != j && grid[i][j] === grid[i][j+1] && grid[i][j] != " ") {
+        temp = grid[i][j]
+        console.log("counter " + counter)
+        counter = counter + 1
+      }
+      console.log("temp " + temp)
+      console.log("grid[i][j] " + grid[i][j])
+      console.log("_.size(row1) " + _.size(row1) + " j " + j)
+      if (_.size(row1)-1 === j && temp === grid[i][j] && grid[i][j] != " ") {
+        console.log("counter2 " + counter)
+        counter = counter + 1
+      }      
+      if (counter === 4) {
+        return true
+      }
+      if (grid[i][j] != grid[i][j+1]) {
+        //console.log("dans le else")
+        counter = 0
+      }
+    }
+  }
+
 
 
 }
 
 algie_connect4(
-        [" ", " ", "o", " ", " ", " ", " "],
-        [" ", " ", "o", "x", "x", " ", " "],
-        ["x", "x", "x", "x", "x", "x", " "],
-        ["o", "x", "x", "o", "x", "o", " "],
-        ["o", "x", "x", "x", "o", "x", " "],
-        ["x", "o", "x", "o", "x", "o", " "],
+        [" ", " ", "o", " ", " ", " "],
+        [" ", " ", "o", "x", "x", " "],
+        ["x", "x", "x", "x", "x", "x"],
+        ["o", "x", "x", "o", "x", "o"],
+        ["o", "x", "x", "x", "o", "x"],
+        ["x", "o", "x", "o", "x", "o"],
         )
 
 
