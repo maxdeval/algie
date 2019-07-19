@@ -1,76 +1,3 @@
-/*function checkLine(a,b,c,d) {
-    // Check first cell non-zero and all cells match
-    return ((a != 0) && (a == b) && (a == c) && (a == d));
-}
-
-function checkWin(grid) {
-
-    // bas
-    for (r = 0; r < _.size(grid); r++)
-        for (c = 0; c < _.size(grid); c++)
-            if (checkLine(grid[r][c], grid[r+1][c], grid[r+2][c], grid[r+3][c]))
-                return true;
-
-    // droit
-    for (r = 0; r < _.size(grid); r++)
-        for (c = 0; c < _.size(grid); c++)
-            if (checkLine(grid[r][c], grid[r][c+1], grid[r][c+2], grid[r][c+3]))
-                return true;
-
-    // bas droite
-    for (r = 0; r < _.size(grid); r++)
-        for (c = 0; c < _.size(grid); c++)
-            if (checkLine(grid[r][c], grid[r+1][c+1], grid[r+2][c+2], grid[r+3][c+3]))
-                return true;
-
-    // bas gauche
-    for (r = 3; r < _.size(grid); r++)
-        for (c = 0; c < _.size(grid); c++)
-            if (checkLine(grid[r][c], grid[r-1][c+1], grid[r-2][c+2], grid[r-3][c+3]))
-                return true;
-    return false;
-}
-*/
-
-/*function checkColums(board, columns, rows) {
-  for (var y = 0; y < columns; y++) {
-    var consecutive = 0;
-    for (var x = 0; x < rows; x++) {
-      if (board[y][x] == "x") {
-        consecutive++;
-        if (consecutive == 4) {
-          return true;
-        }
-      }
-    }
-  }
-  return false;
-}
-
-function checkRows(board, columns, rows) {
-  for (var x = 0; x < rows; x++) {
-    var consecutive = 0;
-    for (var y = 0; y < columns; y++) {
-      if (board[y][x] == 1) {
-        consecutive++;
-        if (consecutive == 4) {
-          return true;
-        }
-      }
-    }
-  }
-  return false;
-}
-
-// Example:
-var board = [
-  [1, 0, 1, 0],
-  [0, 1, 1, 0],
-  [1, 0, 1, 1],
-  [1, 1, 1, 0]
-];
-*/
-
 function algie_connect4(row1, row2, row3, row4, row5, row6) {
 
 /*  var grid = _.concat(row1,row2,row3,row4,row5,row6)
@@ -107,7 +34,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 
   var row, column, coin
 
-/*  for (row = 0; row < grid.length; row++) {
+  for (row = 0; row < grid.length; row++) {
     for (column = 0; column < row1.length; column++) {
       if (_.size(row1) != column && grid[row][column] === grid[row][column+1] && grid[row][column] != " ") {
         temp = grid[row][column]
@@ -123,9 +50,9 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
         counter = 0
       }
     }
-  }*/
+  }
 
-/*  for (column = 0; column < row1.length; column++) {
+  for (column = 0; column < row1.length; column++) {
     for (row = 0; row < grid.length - 3; row++) {
       coin = grid[row][column]
       if ("x" || "o") {
@@ -134,9 +61,9 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
         }
       }
     }
-  }*/
+  }
 
-/*  for(column = 0; column < row1.length - 3; column++) {
+  for(column = 0; column < row1.length - 3; column++) {
     for (row = 0; row < grid.length - 3; row++) {
       coin = grid[row][column]
       if ("x" || "o") {
@@ -145,9 +72,8 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
         }
       }
     }
-  }*/
+  }
 
- // check SW-NE diagonals
   for(column = 0; column < row1.length - 3; column++) {
     for (row = 3; row < grid.length; row++) {
       coin = grid[row][column]
