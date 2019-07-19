@@ -36,8 +36,9 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   for(row = 0; row < grid.length; row++) {
     for (column = 0; column < row1.size - 3; column++) {
       coin = grid[row][column]
+      console.log(coin)
       if (coin === 'x' || coin === 'o') {
-        if (grid[row][column+1] === coin && grid[row][column+2] === coin && grid[row][column+3] === color) {
+        if (grid[row][column+1] === coin && grid[row][column+2] === coin && grid[row][column+3] === coin) {
           console.log("in row")
           return true
         }
@@ -87,12 +88,12 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 }
 
 algie_connect4(
-        ["o", "o", "o", "o", " ", " "],
-        ["k", " ", " ", " ", " ", " "],
-        ["c", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
-        [" ", " ", " ", " ", " ", " "],
+        ["o","o","o","o", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " ", " "],
         )
 
 
