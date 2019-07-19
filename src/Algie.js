@@ -38,6 +38,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
       coin = grid[row][column]
       if (coin === 'x' || coin === 'o') {
         if (grid[row][column+1] === coin && grid[row][column+2] === coin && grid[row][column+3] === coin) {
+          console.log("in raw")
           return true
         }
       }
@@ -61,7 +62,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
       coin = grid[row][column]
       if (coin === "x" || coin === "o") {
         if (grid[row+1][column+1] === coin && grid[row+2][column+2] === coin && grid[row+3][column+3] === coin) {
-          console.log("second part")
+          console.log("second part of the grid, diagonal")
           return true
         }
       }
@@ -73,7 +74,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
       coin = grid[row][column]
       if (coin === "x" || coin === "o") { 
         if (grid[row-1][column+1] === coin && grid[row-2][column+2] === coin && grid[row-3][column+3] === coin) {
-          console.log("first part")
+          console.log("first part of the grid, diagonal")
           return true
         }
       }
