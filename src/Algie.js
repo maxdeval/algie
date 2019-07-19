@@ -30,24 +30,17 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
   }*/
 
   var grid = [row1, row2, row3, row4, row5, row6]
-  var counter
 
   var row, column, coin
 
-  for (row = 0; row < grid.length; row++) {
-    for (column = 0; column < row1.length; column++) {
-      if (_.size(row1) != column && grid[row][column] === grid[row][column+1] && grid[row][column] != " ") {
-        temp = grid[row][column]
-        counter = counter + 1
-      }
-      if (_.size(row1)-1 === column && temp === grid[row][column] && grid[row][column] != " ") {
-        counter = counter + 1
-      }      
-      if (counter === 4) {
-        return true
-      }
-      if (grid[row][column] != grid[row][column+1]) {
-        counter = 0
+  for(row = 0; row < grid.length; row++) {
+    for (column = 0; column < row1.size - 3; column++) {
+      coin = grid[row][column]
+      if ('x' || 'y') {
+        if (grid[row][column+1] === coin && grid[row][column+2] === coin && grid[row][column+3] === color) {
+          console.log("in row")
+          return true
+        }
       }
     }
   }
@@ -57,6 +50,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
       coin = grid[row][column]
       if ("x" || "o") {
         if (grid[row+1][column] === coin && grid[row+2][column] === coin && grid[row+3][column] === coin) {
+          console.log("in column")
           return true
         }
       }
@@ -68,6 +62,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
       coin = grid[row][column]
       if ("x" || "o") {
         if (grid[row+1][column+1] === coin && grid[row+2][column+2] === coin && grid[row+3][column+3] === coin) {
+          console.log("second part")
           return true
         }
       }
@@ -79,6 +74,7 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
       coin = grid[row][column]
       if ("x" || "o") { 
         if (grid[row-1][column+1] === coin && grid[row-2][column+2] === coin && grid[row-3][column+3] === coin) {
+          console.log("first part")
           return true
         }
       }
@@ -91,12 +87,12 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 }
 
 algie_connect4(
-        ["x", " ", "o", " ", " ", " "],
-        [" ", "x", "x", "o", "x", " "],
-        ["x", "o", "o", "x", "x", "x"],
-        ["o", "x", "x", "o", "x", "o"],
-        ["o", "x", "x", "x", "o", "x"],
-        ["x", "o", "o", "o", "x", "o"],
+        [" ", " ", "k", " ", " ", " "],
+        [" ", " ", "o", "x", "x", " "],
+        ["x", "o", "x", "x", "o", "o"],
+        ["o", "x", "o", "o", "x", "o"],
+        ["o", "x", "o", "x", "o", "x"],
+        ["x", "o", "x", "o", "x", "o"],
         )
 
 
