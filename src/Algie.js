@@ -7,7 +7,7 @@ function checkWin(grid) {
 
     // bas
     for (r = 0; r < _.floor(_.divide(_.size(grid), 2)); r++)
-        for (c = 0; c <= _.size(grid); c++)
+        for (c = 0; c < _.size(grid); c++)
             if (checkLine(grid[r][c], grid[r+1][c], grid[r+2][c], grid[r+3][c]))
                 return true;
 
@@ -69,12 +69,12 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 }
 
 algie_connect4(
-        [" ", " ", "o", " ", " ", " "],
-        [" ", " ", "o", "x", "x", " "],
-        ["x", "x", "x", "x", "x", "x"],
-        ["o", "x", "x", "o", "x", "o"],
-        ["o", "x", "x", "x", "o", "x"],
-        ["x", "o", "x", "o", "x", "o"],
+        [" ", " ", "o", " ", " ", " ", " "],
+        [" ", " ", "o", "x", "x", " ", " "],
+        ["x", "x", "x", "x", "x", "x", " "],
+        ["o", "x", "x", "o", "x", "o", " "],
+        ["o", "x", "x", "x", "o", "x", " "],
+        ["x", "o", "x", "o", "x", "o", " "],
         )
 
 
