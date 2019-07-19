@@ -136,11 +136,23 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
     }
   }*/
 
-  for(column = 0; column < row1.length - 3; column++) {
+/*  for(column = 0; column < row1.length - 3; column++) {
     for (row = 0; row < grid.length - 3; row++) {
       coin = grid[row][column]
       if ("x" || "o") {
         if (grid[row+1][column+1] === coin && grid[row+2][column+2] === coin && grid[row+3][column+3] === coin) {
+          return true
+        }
+      }
+    }
+  }*/
+
+ // check SW-NE diagonals
+  for(column = 0; column < row1.length - 3; column++) {
+    for (row = 3; row < grid.length; row++) {
+      coin = grid[row][column]
+      if ("x" || "o") { 
+        if (grid[row-1][column+1] === coin && grid[row-2][column+2] === coin && grid[row-3][column+3] === coin) {
           return true
         }
       }
@@ -154,10 +166,10 @@ function algie_connect4(row1, row2, row3, row4, row5, row6) {
 
 algie_connect4(
         ["x", " ", "o", " ", " ", " "],
-        [" ", "x", "o", "o", "x", " "],
+        [" ", "x", "x", "o", "x", " "],
         ["x", "o", "o", "x", "x", "x"],
-        ["o", "x", "x", "x", "x", "o"],
-        ["o", "o", "x", "x", "o", "x"],
+        ["o", "x", "x", "o", "x", "o"],
+        ["o", "x", "x", "x", "o", "x"],
         ["x", "o", "o", "o", "x", "o"],
         )
 
