@@ -70,7 +70,7 @@ describe("For experienced developers only", function() {
         [" ", " ", " ", " ", " ", " "],
         [" ", " ", "o", "x", "x", " "],
         ["x", "o", "x", "x", "o", "o"],
-        ["o", "x", "o", "o", "x", "o"],
+        ["o", "x", "o", " ", "x", "o"],
         ["o", "x", "o", "x", "o", "x"],
         ["x", "o", "x", "o", "x", "o"],
         )).toEqual(false);
