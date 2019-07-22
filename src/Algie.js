@@ -1,11 +1,3 @@
-function sortArgs (){
-  var q = [];
-  for (var k = 0, l = arguments.length; k < l; k++){
-    q[k] = arguments[k];
-  }
-  return q.sort();
-}
-
 function algie_connect4() {
 
 /*  var grid = _.concat(row1,row2,row3,row4,row5,row6)
@@ -40,12 +32,8 @@ function algie_connect4() {
   var grid = []
 
   for (var i = 0; i < arguments.length; i++) {
-    grid[i] = arguments[i]
+    grid.push(_.toArray(arguments[i]))
   }
-
-  console.log(grid.length)
-  console.log(arguments.length)
-  //console.log(arguments)
 
   var row, column, coin
   var row1 = arguments.length
