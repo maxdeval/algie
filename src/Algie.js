@@ -19,13 +19,20 @@ function algie_extractApi(argument) {
   //argument.features[0].properties.context
   var i = 0;
   var arrayOfTowns = [];
+  var arrayOfCityCode = [];
+  var result = []
   _.each(argument, function(value, key){
-    console.log(argument.features[i].properties.name)
-    arrayOfTowns.push(_.toString(argument.features[i].properties.name))
+    arrayOfCityCode.push(_.toString(argument.features[i].properties.postcode))
+    arrayOfTowns.push(_.toString(argument.features[i].properties.city))
+    arrayOfTowns = _.uniq(arrayOfTowns) 
+    console.log(arrayOfTowns)
+    result[i] = arrayOfCityCode[i] + " " + arrayOfTowns[i]
     i += 1
-  })
-  console.log(arrayOfTowns)
 
+
+  })
+
+console.log(result)
 
 }
 
