@@ -1,6 +1,3 @@
-
-
-
 function algie_extractApi(argument) {
 /*  // body...
   //console.log(argument.properties)
@@ -24,20 +21,21 @@ function algie_extractApi(argument) {
   var arrayOfTowns = [];
   var arrayOfCityCode = [];
   var result = []
-  var lengthArrayOfTowns=0;
-  var test = [];
+
   _.each(argument, function(value, key){
+/*    console.log(argument.features[i].properties.postcode)
+    console.log("!_.isEmpty(argument.features[i].properties.postcode)")
     console.log(!_.isEmpty(argument.features[i].properties.postcode))
-    console.log(!_.isEmpty(argument.features[i].properties.city))
-    if (!_.isEmpty(argument.features[i].properties.postcode) || !_.isEmpty(argument.features[i].properties.city) ){
-        arrayOfCityCode.push(_.toString(argument.features[i].properties.postcode))
-        arrayOfTowns.push(_.toString(argument.features[i].properties.city))
+    console.log(argument.features[i].properties.city)
+    console.log("!_.isEmpty(argument.features[i].properties.city)")
+    console.log(!_.isEmpty(argument.features[i].properties.city))*/
+      arrayOfCityCode.push(_.toString(argument.features[i].properties.postcode))
+      arrayOfTowns.push(_.toString(argument.features[i].properties.city))
+      arrayOfTowns = _.uniq(arrayOfTowns) 
+      if (arrayOfTowns[i] != undefined){
         result[i] = arrayOfCityCode[i] + " " + arrayOfTowns[i]
-        arrayOfTowns = _.uniq(arrayOfTowns) 
-        i += 1
-
-    }
-
+      }
+      i += 1
   })
 
 /*  while ( lengthArrayOfTowns < arrayOfTowns.length ) {
@@ -49,13 +47,13 @@ function algie_extractApi(argument) {
     lengthArrayOfTowns += 1
 
   }*/
-
+/*
 test = _.map(result, function(e) {
   _.each(result, function(value, key){
     if (result[key])
   })
 })
-
+*/
 console.log(result)
 
 }
