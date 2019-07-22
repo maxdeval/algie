@@ -17,12 +17,15 @@ function algie_extractApi(argument) {
   })*/
 
   //argument.features[0].properties.context
-  var i = 0
+  var i = 0;
+  var arrayOfTowns;
   _.each(argument, function(value, key){
+    console.log(argument.features[i].properties.name)
+    arrayOfTowns.push(_.toString(argument.features[i].properties.name))
     i += 1
-    //console.log(argument.features[0].properties.context)
-    console.log(argument.features[i].properties.context)
   })
+  console.log(arrayOfTowns)
+
 
 }
 
