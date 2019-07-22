@@ -18,7 +18,7 @@ function algie_extractApi(argument) {
 
   //argument.features[0].properties.context
   var i = 0;
-  var arrayOfTowns;
+  var arrayOfTowns = [];
   _.each(argument, function(value, key){
     console.log(argument.features[i].properties.name)
     arrayOfTowns.push(_.toString(argument.features[i].properties.name))
